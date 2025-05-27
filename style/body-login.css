@@ -3,7 +3,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url();
+    background-image: url("/Applications/XAMPP/xamppfiles/htdocs/project-GASS/gambar/Halaman Login & Sign up.png");
     background-size: cover; /* Make the image cover the entire area */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat;
