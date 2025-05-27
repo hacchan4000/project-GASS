@@ -161,13 +161,13 @@ html, body {
 .return-date,
 .promos {
     height: 140px;
-    background-color: white;
+    background-color: rgb(238, 153, 153);
     border-radius: 15px;
 }
 
 
 .store-rec{
-    height: 20px;
+    height: 500px;
     width: 10px;
     background-color: white;
     
