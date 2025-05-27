@@ -109,7 +109,7 @@ html, body {
 }
 
 .deals1 {
-    width: 350px;
+    width: 320px;
     height: 95px;
     background-color: white;
     margin: 20px 0;
@@ -141,6 +141,7 @@ html, body {
 /* Left big column */
 .left-column {
     flex: 2; /* takes more space */
+    margin-top: 10px;
 }
 
 /* Right column (2 stacked boxes) */
@@ -149,6 +150,7 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 40px;
 }
 
 /* Example sizes for the boxes */
@@ -167,14 +169,16 @@ html, body {
 
 
 .store-rec{
-    height: 400px;
+    height: 460px;
     width: 5px;
     background-color: white;
     border-radius: 20px;
+    position: relative;
+    top: -2cm; /* move up by 2cm */
     
 }
 .best-deals {
-    width: 30%;
+    width: 25%;
 }
 
 .widgets {
@@ -182,5 +186,5 @@ html, body {
 }
 
 .store-rec {
-    width: 30%;
+    width: 20%;
 }
