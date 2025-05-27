@@ -40,7 +40,7 @@
             <form action="database/check.php" method="POST"> <!-- form itu buat kalo tar klik tombol login ganti halaman ke halaman main-menu -->
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                    <input type="text" placeholder="" required name="myNim" id="myNim">
+                    <input type="text" placeholder="" required name="myUser" id="myUser">
                     <label>Username</label>
                 </div>
 

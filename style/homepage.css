@@ -1,3 +1,34 @@
 body{
-    background-color: rgb(234, 44, 44);
+    background-color: rgb(177, 208, 200);
+}
+
+/* Make sure the body and background fill the full screen */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background wrapper */
+.background {
+    height: 100%;
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    
+}
+
+.inner-background{
+    width: 1350px;
+    height: 720px;
+    background-color: white;
+    border-radius: 55px;
+}
+.inner-header{
+    width: 1300px;
+    height: 300px;
+    background-color: rgb(149, 187, 176);
+    border-radius: 50px;
+    margin: 20px;
+    color: white;
 }
