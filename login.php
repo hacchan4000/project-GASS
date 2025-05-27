@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style/login-header.css">
     <link rel="stylesheet" href="style/body-login.css">
 
-      
+    
+    
 </head>
 
 <body>
    <header>
-   
+    <img class="logo-unud" src="gambar/background/newUnud.jpg" alt="">
     <nav class="navigasi">
         <a href="#">Home</a>
         <a href="#">About</a>
@@ -40,7 +41,7 @@
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
                     <input type="text" placeholder="" required name="myNim" id="myNim">
-                    <label>Username</label>
+                    <label>NIM</label>
                 </div>
 
                
@@ -49,8 +50,8 @@
                     <input type="password" placeholder="" required name="myPassword">
                     <label>password</label>
                 </div>
-                
-                <div class="error-box">
+
+                <div class="error-box" style="font-weight: bold;">
                     <p ><?php if (isset($_GET['error'])) echo htmlspecialchars($_GET['error']); ?></p>
                 </div>
 
@@ -77,6 +78,12 @@
                 </div>
 
                 <div class="input-box">
+                    <span class="icon"><ion-icon name="school"></ion-icon></ion-icon></span>
+                    <input type="text" placeholder="" required name="NIM">
+                    <label>NIM</label>
+                </div>
+
+                <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
                     <input type="text" placeholder="" required name="Email">
                     <label>Email</label>
@@ -87,14 +94,6 @@
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                     <input type="password" placeholder="" required name="password">
                     <label>password</label>
-                </div>
-
-                <div class="box-drop">
-                    <label for="category">Choose a category:</label>
-                    <select id="category" name="category">
-                        <option value="Peminjam">Meminjam</option>
-                        <option value="Penyewa">Menyewakan</option>
-                    </select>
                 </div>
                 
 
@@ -116,3 +115,5 @@
 
 </body>
 </html>
+
+
