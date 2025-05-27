@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo-unud{
+    width: 120px;
+    height: 100px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    
+}
+
+.navigasi a {
+    position: relative;
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 500;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigasi a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    background: black;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigasi a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.popUp-reg{
+    width: 130px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    outline: none;
+    border-radius: 6px;
+    margin-left: 40px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    transition: .5s;
+}
+
+.popUp-reg:hover {
+    background: black;
+    color: white;
+}
+
+.popUp-login{
+    width: 130px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    margin-left: 40px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.popUp-login:hover {
+    background: white;
+    color: black;
+}
+
