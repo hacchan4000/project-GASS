@@ -41,7 +41,7 @@
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
                     <input type="text" placeholder="" required name="myNim" id="myNim">
-                    <label>NIM</label>
+                    <label>Username</label>
                 </div>
 
                
