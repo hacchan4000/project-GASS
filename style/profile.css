@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('InriaSana_Regular.ttf') format('truetype');
+}
+body{
+    background-color: rgb(177, 208, 200);
+    margin: 0;
+    padding: 0;
+    font-family: 'MyFont', sans-serif;
+}
+.username{
+    width: 280px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 60px;
+    border-radius: 51px;
+    background-color: #CFE3DC;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile{
+    border-radius: 100%;
+    width: 117px;
+    height: 97px;
+    position: fixed;
+    top: 110px;
+}
+p{
+    color: rgb(93, 107, 107);
+    font-weight: bold;
+    position: fixed;
+    top: 210px;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    align-items: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 300px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+h1{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    font-size: 20px;
+}
+
+.data{
+    width: 704px;
+    height: 190px;
+    background-color: rgb(149, 187, 176);
+    position: fixed;
+    left: 380px;
+    top: 45px;
+    border-radius: 0px 51px 51px 0px;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+}
+.section {
+    margin-bottom: 30px;
+}
+.section-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 80px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #444;
+}
+.info-value {
+    color: #fff;
+    font-weight: bold;
+}
+
+.edit{
+    width: 23px;
+    height: 23px;
+    margin-right: 8px
+}
+.logout{
+   width: 23px;
+   height: 23px;
+   margin-right: 8px 
+}
+.item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.password{
+    width: 23px;
+    height: 23px;
+    margin-right: 8px 
+}
+.medsos{
+    width: 704px;
+    height: 140px;
+    background-color: rgb(149, 187, 176);
+    position: fixed;
+    left: 380px;
+    top: 250px;
+    border-radius: 0px 51px 51px 0px;
+}
+
+.status{
+    width: 704px;
+    height: 140px;
+    background-color: rgb(149, 187, 176);
+    position: fixed;
+    left: 380px;
+    top: 405px;
+    border-radius: 0px 51px 51px 0px;
+}
+.top_medsos{
+    width: 704px;
+    height: 60px;
+    background-color: rgb(97, 139, 125);
+    position: fixed;
+    left: 380px;
+    top: 250px; 
+    border-radius: 0px 51px 0px 0px; 
+}
+
+.top_status{
+    width: 704px;
+    height: 60px;
+    background-color: rgb(97, 139, 125);
+    position: fixed;
+    left: 380px;
+    top: 405px; 
+    border-radius: 0px 51px 0px 0px; 
+}
+.sosmed{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 65px;
+}
+.apps{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.media{
+    font-size: 20px;
+    color: rgb(82, 83, 83);
+    font-weight: bold;
+}
+.logo{
+    width: 23px;
+    height: 23px;
+    margin-right: 8px    
+}
+
