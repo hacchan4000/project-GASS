@@ -1,40 +1,185 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
-*{
-    font-family: 'Inria Sans', sans-serif;
-}
-body{
-    background-color: rgb(177, 208, 200);
-    
-}
-
-/* Make sure the body and background fill the full screen */
-html, body {
-    height: 100%;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: rgb(177, 208, 200);
 }
 
 /* Background wrapper */
 .background {
     height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: center; /* horizontal center */
-    align-items: center;     /* vertical center */
-    
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
 }
 
-.inner-background{
+/* Centered inner content */
+.inner-background {
     width: 1350px;
     height: 720px;
-    background-color: white;
+    background: radial-gradient(circle, #F1F1F1, #F3EFEE);
     border-radius: 55px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.inner-header{
-    width: 1300px;
-    height: 300px;
+
+/* Header styling */
+.inner-header {
+    width: 100%;
+    height: 270px;
     background-color: rgb(149, 187, 176);
     border-radius: 50px;
-    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+    
     color: white;
+}
+
+/* Weather Section */
+.weather {
+    width: 280px;
+    height: 200px;
+    background-color: transparent;
+    margin: 25px;
+}
+.forecast ion-icon {
+    font-size: 80px; /* make the ion-icon larger */
+     /* optional: change icon color (e.g. orange) */
+}
+.suhu h1{
+    font-size: 60px;
+}
+.judul h1 {
+    font-size: 80px;
+   
+}
+
+.cuaca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+
+}
+
+/* Navigation Section */
+.navigation {
+    width: 600px;
+    height: 50px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.username {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #ccc;
+}
+
+/* Body Section */
+.inner-body {
+    display: flex;
+    justify-content: space-between; /* or 'center', or 'flex-start' */
+    align-items: flex-start;        /* aligns items at top */
+    gap: 20px;                      /* adds space between the three sections */
+    padding: 20px; 
+}
+
+/* Best Deals Section */
+.best-deals h2 {
+    margin-bottom: 15px;
+}
+
+.deals1 {
+    width: 350px;
+    height: 95px;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add your widget and store-rec styles below */
+
+
+.rentals-nearby{
+    width: 250px;
+    height: 350px;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.return-date{
+    width: 250px;
+    height: 350px;
+    background-color: white;
+}
+
+.widgets {
+    display: flex;
+    gap: 20px;
+}
+
+/* Left big column */
+.left-column {
+    flex: 2; /* takes more space */
+}
+
+/* Right column (2 stacked boxes) */
+.right-column {
+    flex: 1; /* takes less space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Example sizes for the boxes */
+.rentals-nearby {
+    height: 300px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.return-date,
+.promos {
+    height: 140px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+
+.store-rec{
+    height: 20px;
+    width: 10px;
+    background-color: white;
+    
+}
+.best-deals {
+    width: 30%;
+}
+
+.widgets {
+    width: 40%;
+}
+
+.store-rec {
+    width: 30%;
 }
