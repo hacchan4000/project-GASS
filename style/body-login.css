@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url('/project-GASS/gambar/newLoginBg.jpg'); /* Make sure path is correct */
-    background-size: auto;
+    background-size: center;
     background-position: center;
     background-repeat: no-repeat;
     min-width: 800px;
