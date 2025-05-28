@@ -1,13 +1,12 @@
 <?php
 session_start();
 
-//cek poin
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $user = $_POST['myUser'];
     $pass = $_POST['myPassword'];
-    $tipe = $_POST['tipe'];
+    $tipe = $_POST['tipe_user'];
 
-    if (!empty($user) && !empty($pass)) {
+    if (!empty($user) && !empty($pass) && ($tipe == "0" || $tipe == "1")) {
         $host = "localhost";
         $port = 3308;
         $dbUsername = "root";
@@ -21,59 +20,43 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             die("Internal server error. Please try again later.");
         }
 
-        // Reusable function for login validation
-        function checkUser($conn, $query, $param, $type) {
-            $stmt = $conn->prepare($query);
-            $stmt->bind_param("s", $param);
-            $stmt->execute();
-            $result = $stmt->get_result();
+        $table = $tipe == "0" ? "Penyewa" : "Pemilik";
+        $query = "SELECT * FROM $table WHERE Username = ?";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("s", $user);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-            if ($result->num_rows == 1) {
-                $data = $result->fetch_assoc();
-                $storedPassword = $data['Password'];
+        if ($result->num_rows === 1) {
+            $data = $result->fetch_assoc();
+            $storedPassword = $data['Password'];
 
-                if (password_verify($_POST['myPassword'], $storedPassword)) {
-                    session_regenerate_id(true);
+            if (password_verify($pass, $storedPassword)) {
+                session_regenerate_id(true);
+                $_SESSION['user'] = $data;
+                $_SESSION['Username'] = $data['Username'];
 
-                    if ( $type == 1) {
-                        $_SESSION['user'] = $data['user'];
-                        $_SESSION['Username'] = $data['Username'];
-                        header("Location: ../main-menu.php");
-                    } else {
-                        $_SESSION['user'] = $data['user'];
-                        $_SESSION['Username'] = $data['Username'];
-                        header("Location: ../profil.php");
-                    }
-
-                    // Set session variables based on user role
-                   
-                    $stmt->close();
-                    exit();
+                // Redirect based on user type
+                if ($tipe == "0") {
+                    header("Location: ../homePembeli.php");
                 } else {
-                    return "Password salah.";
+                    header("Location: ../homePeminjam.php");
                 }
+                exit();
+            } else {
+                $errorMessage = "Password salah.";
             }
-            $stmt->close();
-            return false; // User not found
+        } else {
+            $errorMessage = "Akun tidak ditemukan.";
         }
 
-        // Check student login
-        $errorMessage = checkUser($conn, "SELECT * FROM Penyewa WHERE Username = ?", $user, $tipe);
-        $errorMessage = checkUser($conn, "SELECT * FROM Pemilik WHERE Username = ?", $user, $tipe);
-        
-        
-
+        $stmt->close();
         $conn->close();
 
-        // If no user found
-        if ($errorMessage) {
-            header("Location: ../login.php?error=" . urlencode($errorMessage));
-        } else {
-            header("Location: ../login.php?error=" . urlencode("Akun tidak ditemukan."));
-        }
+        header("Location: ../login.php?error=" . urlencode($errorMessage));
         exit();
     } else {
-        $errorMessage = "Harap masukkan user dan password.";
+        $errorMessage = "Harap masukkan user, password, dan tipe.";
         header("Location: ../login.php?error=" . urlencode($errorMessage));
         exit();
     }

@@ -132,17 +132,28 @@
                 <div class="right-column">
                   <!-- Smaller boxes stacked on top of each other -->
                   <div class="return-date">
-                    <ion-icon name="calendar-clear-outline"></ion-icon>
-                    <h2>return before</h2>
-                    <h1>31/12/2025</h1>
+                    <div class="calendar">
+                      <ion-icon name="calendar-clear-outline"></ion-icon>
+                    </div>
+
+                    <div class="tanggal-balik">
+                      <h3>return before</h3>
+                      <h1>31/12/2025</h1>
+                    </div>
+                   
                   </div>
                   <div class="promos">
+                    <div class="promo1"></div>
                     <div class="promo1"></div>
                   </div>
                 </div>
               </div>
+
             <div class="store-rec">
-                
+                <div class="rec-header">
+                  <h3>Store Recommendation</h3>
+                </div>
+                <div class="rec-body"></div>
             </div>
         </div>
         </div>

@@ -225,16 +225,9 @@ html, body {
 }
 
 
-.store-rec{
-    height: 460px;
-    width: 5px;
-    background-color: white;
-    border-radius: 20px;
-    position: relative;
-    top: -2.5cm; /* move up by 2cm */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
-}
+
+
+
 .best-deals {
     width: 25%;
     
@@ -249,3 +242,69 @@ html, body {
 .store-rec {
     width: 20%;
 }
+
+.return-date{
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+}
+.calendar{
+    font-size: 90px;
+    margin: 2px;
+}
+.tanggal-balik{
+    position: relative;
+    top: -0.3cm;
+}
+
+.promos{
+    position: relative;
+    justify-content: center; /* center horizontally */
+    align-items: center; 
+    
+}
+.promo1{
+    width: 250px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: #618B7D;
+    margin: 5px;
+}
+
+
+
+.store-rec {
+    width: 325px;
+    height: 490px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -2.5cm;
+  }
+  
+  /* Header with different color */
+  .rec-header {
+    background-color: #618B7D; /* green header */
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+    justify-content: center; /* center horizontally */
+    align-items: center; 
+  }
+  
+  /* Body with a different background */
+  .rec-body {
+    background-color: white;
+    height: calc(100% - 60px); /* Adjust to leave room for header */
+    padding: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+
+

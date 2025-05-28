@@ -51,9 +51,18 @@
                     <label>password</label>
                 </div>
 
-                <div class="error-box" style="font-weight: bold;">
-                    <p><?php if (isset($_GET['error'])) echo htmlspecialchars($_GET['error']); ?></p>
+                <div class="input-tipe">
+                    <select name="tipe_user" id="tipe_user">
+                        <option value="Null">Choose your Category</option>
+                        <option value="0">Penyewa</option>
+                        <option value="1">Pemilik</option>
+                    </select>
                 </div>
+
+                <p ><?php if (isset($_GET['error'])) echo htmlspecialchars($_GET['error']); ?></p>
+             
+
+             
 
                 <div class="inget-pass">
                     <label><input type="checkbox"> Remember me</label>
