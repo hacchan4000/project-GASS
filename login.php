@@ -79,7 +79,7 @@
 
                 <div class="input-box">
                     <span class="icon"><ion-icon name="call"></ion-icon></span>
-                    <input type="text" placeholder="" required name="NIM">
+                    <input type="text" placeholder="" required name="Phone">
                     <label>Phone number</label>
                 </div>
 
@@ -95,13 +95,21 @@
                     <input type="password" placeholder="" required name="password">
                     <label>password</label>
                 </div>
+
+                <div class="input-tipe">
+                    <select name="tipe" id="tipe">
+                        <option value="0">Penyewa</option>
+                        <option value="1">Peminjam</option>
+                    </select>
+                </div>
                 
+
+                <button type="submit" class="tombol-submit" >Sign-Up</button>
+
 
                 <div class="inget-pass">
                     <label><input type="checkbox" required> I agree to the terms & conditions</label>
                 </div>
-
-                <button type="submit" class="tombol-submit" >Sign-Up</button>
             </form>
         </div>
         

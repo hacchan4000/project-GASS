@@ -94,6 +94,8 @@ html, body {
     border: 2px solid #ccc;
 }
 
+
+
 /* Body Section */
 .inner-body {
     display: flex;
@@ -115,7 +117,27 @@ html, body {
     margin: 20px 0;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    display: flex; /* make it flex to split left/right */
+    overflow: hidden; /* prevent child corners from spilling out */
 }
+
+  
+.deals-kiri {
+    flex: 6; /* 30% of total (3 out of 10) */
+    background-color: #ffffff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .deals-kanan {
+    flex: 4; /* 70% of total (7 out of 10) */
+    background-color: #618B7D;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  
 
 /* Add your widget and store-rec styles below */
 
@@ -183,8 +205,11 @@ html, body {
 }
 .best-deals {
     width: 25%;
+    
 }
 
+
+  
 .widgets {
     width: 40%;
 }

@@ -44,17 +44,40 @@
             <div class="best-deals">
                 <h2>Best Deals</h2>
                 <div class="deals1">
-                    
+
+                    <div class="deals-text">
+                        <h3>Wayan Rentals</h3>
+                        <p>Start from</p>
+                        <div class="price-badge">IDR 750.000</div>
+                        <div class="deal-icons">
+                          <ion-icon name="chatbubble-outline"></ion-icon>
+                          <ion-icon name="star-outline"></ion-icon>
+                        </div>
+                      </div>
+                      <div class="deals-image">
+                        <img src="gambar/motorbike.png" alt="Motorbike">
+                      </div>
+
                 </div>
-                <div class="deals1"></div>
-                <div class="deals1"></div>
+                <div class="deals1">
+                    <div class="deals-kiri"></div>
+                    <div class="deals-kanan">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="deals1">
+                    <div class="deals-kiri"></div>
+                    <div class="deals-kanan"></div>
+                </div>
             </div>
 
 
             <div class="widgets">
                 <div class="left-column">
                   <!-- Large element on the left -->
-                  <div class="rentals-nearby"></div>
+                  <div class="map-container">
+                    <img class="rentals-nearby" src="gambar/peta.png" alt="">
+                  </div>
                 </div>
               
                 <div class="right-column">

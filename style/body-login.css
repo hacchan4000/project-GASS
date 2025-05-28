@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url('/project-GASS/gambar/newLoginBg.jpg') !important; /* Make sure path is correct */
-    background-size: center;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   
@@ -23,7 +23,7 @@ body {
     border: black;
     background-color: black;
     color: white;
-    margin: 10px;
+
     transition: .5s;
 }
 
@@ -144,10 +144,23 @@ body {
     right: 8px;
     line-height: 57px;
 }
+.input-tipe select{
+    width: 350px;           /* Adjust width as needed */
+    padding: 10px;          /* Optional: adds inner spacing */
+    border-radius: 40px;    /* Rounds the corners */
+    border: 1px solid #ccc; /* Optional: adds a light gray border */
+    font-size: 16px;        /* Optional: improves readability */
+    background-color: white;
+    border-color: #ffffff;
+    margin-bottom: 10px;
+   
+}
+
 
 .inget-pass{
     font-weight: 500;
     display: flex;
     justify-content: space-between;
 }
+
 
