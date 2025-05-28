@@ -4,12 +4,16 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Get form input
-$username = $_POST['username'] ?? '';
-$phone = $_POST['Phone'] ?? '';
-$email = $_POST['Email'] ?? '';
-$password = $_POST['password'] ?? '';
-$tipe = $_POST['tipe'] ?? '0'; // default to 0
+$username = $_POST['username'];
+$phone    = $_POST['Phone'];
+$email    = $_POST['Email'];
+$pass     = $_POST['password'];
+$tipe     = $_POST['tipe']; // 0 = Penyewa, 1 = Pemilik
+$fullname = $_POST['fullname'];
+$alamat   = $_POST['alamat'];
+$insta    = $_POST['insta'];
+$fesbuk   = $_POST['fesbuk'];
+$twitter  = $_POST['twitter'];
 
 // Dummy placeholder values
 $fullname = '';
@@ -19,8 +23,8 @@ $fesbuk = '';
 $twitter = '';
 
 // Validate required fields
-if (!empty($username) && !empty($phone) && !empty($email) && !empty($password)) {
-    // DB connection
+if (!empty($username) && !empty($phone) && !empty($email) && !empty($pass)) {
+    // Database connection
     $host = "localhost";
     $port = 3308;
     $dbUsername = "root";
@@ -33,44 +37,42 @@ if (!empty($username) && !empty($phone) && !empty($email) && !empty($password)) 
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Hash password
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    // Hash the password securely
+    $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 
-    if ($tipe == "0") {
-        // Penyewa
-        $status = "1";
-        $sql = "INSERT INTO Penyewa (Status, Username, Fullname, Email, Password, Telpon, Alamat, insta, fesbuk, twitter)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    // Generate unique ID with prefix
+    $prefix = ($tipe == 0) ? '0' : '1';
+    $uniqueId = $prefix . uniqid(); // e.g. 0<random>, 1<random>
 
-        $stmt = $conn->prepare($sql);
-        if (!$stmt) {
-            die("Prepare failed: " . $conn->error);
-        }
+    if ($tipe == 0) {
+        // INSERT INTO Penyewa
+        $stmt = $conn->prepare("INSERT INTO Penyewa 
+            (Id, Status, Username, Fullname, Email, Password, Telpon, Alamat, insta, fesbuk, twitter) 
+            VALUES (?, '0', ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-        $stmt->bind_param("ssssssssss", $status, $username, $fullname, $email, $hashedPassword, $phone, $alamat, $insta, $fesbuk, $twitter);
+        $stmt->bind_param("ssssssssss", $uniqueId, $username, $fullname, $email, $hashedPass, $phone, $alamat, $insta, $fesbuk, $twitter);
+
     } else {
-        // Pemilik
-        $sql = "INSERT INTO Pemilik (Username, Fullname, Email, Phone, Alamat, Password, Insta, Fesbuk, Twitter)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        // INSERT INTO Pemilik
+        $stmt = $conn->prepare("INSERT INTO Pemilik 
+            (Id, Username, Fullname, Email, Phone, Alamat, Password, Insta, Fesbuk, Twitter) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-        $stmt = $conn->prepare($sql);
-        if (!$stmt) {
-            die("Prepare failed: " . $conn->error);
-        }
-
-        $stmt->bind_param("sssssssss", $username, $fullname, $email, $phone, $alamat, $hashedPassword, $insta, $fesbuk, $twitter);
+        $stmt->bind_param("ssssssssss", $uniqueId, $username, $fullname, $email, $phone, $alamat, $hashedPass, $insta, $fesbuk, $twitter);
     }
 
+    // Execute and confirm
     if ($stmt->execute()) {
-        echo "Registrasi berhasil!";
+        header("Location: ../login.php");
     } else {
-        echo "Error saat menyimpan data: " . $stmt->error;
+        echo "Gagal menyimpan data: " . $stmt->error;
     }
 
     $stmt->close();
     $conn->close();
+
 } else {
-    echo "Data belum lengkap!";
+    echo "Data belum lengkap";
     die();
 }
 ?>

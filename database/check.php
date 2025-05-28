@@ -5,6 +5,7 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $user = $_POST['myUser'];
     $pass = $_POST['myPassword'];
+    $tipe = $_POST['tipe'];
 
     if (!empty($user) && !empty($pass)) {
         $host = "localhost";
@@ -21,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         }
 
         // Reusable function for login validation
-        function checkUser($conn, $query, $param, $role) {
+        function checkUser($conn, $query, $param, $type) {
             $stmt = $conn->prepare($query);
             $stmt->bind_param("s", $param);
             $stmt->execute();
@@ -29,19 +30,27 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
             if ($result->num_rows == 1) {
                 $data = $result->fetch_assoc();
-                $storedPassword = $data['Pass'];
+                $storedPassword = $data['Password'];
 
                 if (password_verify($_POST['myPassword'], $storedPassword)) {
                     session_regenerate_id(true);
-                    $_SESSION['role'] = $role;
+
+                    if ( $type == 1) {
+                        $_SESSION['user'] = $data['user'];
+                        $_SESSION['Username'] = $data['Username'];
+                        header("Location: ../main-menu.php");
+                    } else {
+                        $_SESSION['user'] = $data['user'];
+                        $_SESSION['Username'] = $data['Username'];
+                        header("Location: ../profil.php");
+                    }
 
                     // Set session variables based on user role
-                  
-
+                   
                     $stmt->close();
                     exit();
                 } else {
-                    return "Password salah untuk $role.";
+                    return "Password salah.";
                 }
             }
             $stmt->close();
@@ -49,12 +58,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         }
 
         // Check student login
-        $errorMessage = checkUser($conn, "SELECT * FROM mahasiswa WHERE user = ?", $user, 'student');
+        $errorMessage = checkUser($conn, "SELECT * FROM Penyewa WHERE Username = ?", $user, $tipe);
+        $errorMessage = checkUser($conn, "SELECT * FROM Pemilik WHERE Username = ?", $user, $tipe);
         
-        if (!$errorMessage) {
-            // Check admin login
-            $errorMessage = checkUser($conn, "SELECT * FROM myAdmin WHERE id = ?", $user, 'admin');
-        }
+        
 
         $conn->close();
 
