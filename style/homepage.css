@@ -126,11 +126,13 @@ html, body {
     background-color: white;
     margin-top: 30px;
     border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .return-date{
     width: 250px;
     height: 350px;
     background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .widgets {
@@ -155,16 +157,17 @@ html, body {
 
 /* Example sizes for the boxes */
 .rentals-nearby {
-    height: 300px;
+    height: 333px;
     background-color: white;
     border-radius: 15px;
 }
 
 .return-date,
 .promos {
-    height: 140px;
+    height: 155px;
     background-color: rgb(249, 249, 249);
     border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -174,7 +177,8 @@ html, body {
     background-color: white;
     border-radius: 20px;
     position: relative;
-    top: -2cm; /* move up by 2cm */
+    top: -2.5cm; /* move up by 2cm */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     
 }
 .best-deals {

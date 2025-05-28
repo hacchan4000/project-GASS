@@ -78,9 +78,9 @@
                 </div>
 
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="school"></ion-icon></ion-icon></span>
+                    <span class="icon"><ion-icon name="call"></ion-icon></span>
                     <input type="text" placeholder="" required name="NIM">
-                    <label>NIM</label>
+                    <label>Phone number</label>
                 </div>
 
                 <div class="input-box">

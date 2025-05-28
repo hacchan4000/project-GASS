@@ -8,10 +8,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/project-GASS/gambar/gambarLogin.png'); /* Make sure path is correct */
-    background-size: cover;
+    background-image: url('/project-GASS/gambar/newLoginBg.jpg'); /* Make sure path is correct */
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
+    min-width: 800px;
 }
 
 .tombol-submit{
