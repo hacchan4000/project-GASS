@@ -99,7 +99,7 @@
                 <div class="input-tipe">
                     <select name="tipe" id="tipe">
                         <option value="0">Penyewa</option>
-                        <option value="1">Peminjam</option>
+                        <option value="1">Pemilik</option>
                     </select>
                 </div>
                 

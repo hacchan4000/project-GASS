@@ -6,12 +6,10 @@
     box-sizing: border-box;
     font-family: 'Inria Sans', sans-serif;
 }
-
 html, body {
     height: 100%;
     background-color: rgb(177, 208, 200);
 }
-
 /* Background wrapper */
 .background {
     height: 100%;
@@ -20,6 +18,9 @@ html, body {
     justify-content: center; /* center horizontally */
     align-items: center;     /* center vertically */
 }
+
+
+
 
 /* Centered inner content */
 .inner-background {
@@ -31,7 +32,8 @@ html, body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Header styling */
+
+/* HEADER SECTION */
 .inner-header {
     width: 100%;
     height: 270px;
@@ -39,11 +41,8 @@ html, body {
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
-    
-    
     color: white;
 }
-
 /* Weather Section */
 .weather {
     width: 280px;
@@ -62,7 +61,6 @@ html, body {
     font-size: 80px;
    
 }
-
 .cuaca {
     display: flex;
     align-items: center;
@@ -70,6 +68,8 @@ html, body {
     font-size: 24px;
 
 }
+
+
 
 /* Navigation Section */
 .navigation {
@@ -80,12 +80,10 @@ html, body {
     justify-content: space-between;
     margin: 30px;
 }
-
 .username {
     font-size: 50px;
     font-weight: 500;
 }
-
 .profile-pic {
     width: 60px;
     height: 60px;
@@ -97,6 +95,8 @@ html, body {
 
 
 /* Body Section */
+
+
 .inner-body {
     display: flex;
     justify-content: space-between; /* or 'center', or 'flex-start' */
@@ -105,21 +105,22 @@ html, body {
     padding: 20px; 
 }
 
-/* Best Deals Section */
-.best-deals h2 {
-    margin-bottom: 15px;
-}
 
+
+/* Best Deals Section */
+.best-deals h3 {
+    margin-bottom: 8px;
+}
 .deals1 {
     width: 320px;
-    height: 95px;
+    height: 98px;
     background-color: white;
     margin: 20px 0;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     
     display: flex; /* make it flex to split left/right */
-    overflow: hidden; /* prevent child corners from spilling out */
+    overflow: visible; /* prevent child corners from spilling out */
 }
 
   
@@ -136,6 +137,37 @@ html, body {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+  .container-gambar{
+    width: 10px;
+    height: 50px;
+    overflow: visible;
+    position: relative;
+    top: -0.8cm; /* move up by 2cm */
+    right: 0.5cm;
+  }
+  .gambar-deals{
+    overflow: visible;
+    max-width: 160px;
+  }
+  .deals-elements{
+    margin: 10px;
+    display: flex;
+  }
+
+  .price-badge{
+    width: 90px;
+    height: 20px;
+    background-color: rgb(219, 215, 215);
+    border-radius: 8px;
+  }
+  .deal-icons{
+    position: relative;
+    bottom: -1.2cm; /* move up by 2cm */
+    left: -0.5cm;
+    font-size: 20px;
+  }
+
+
   
   
 
