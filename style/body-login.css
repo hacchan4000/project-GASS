@@ -8,8 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: red !important;
-    background-image: url(''); /* Make sure path is correct */
+    background-image: url('/project-GASS/gambar/newLoginBg.jpg') !important; /* Make sure path is correct */
     background-size: center;
     background-position: center;
     background-repeat: no-repeat;
