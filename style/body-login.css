@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: red !important;
     background-image: url(''); /* Make sure path is correct */
     background-size: center;
     background-position: center;
