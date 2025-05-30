@@ -17,34 +17,19 @@
         
             <div class="inner-header">
 
-                <div class="weather">
-                    <div class="judul">
-                        <h1>HOME</h1>
-                    </div>
-                    <div class="cuaca">
-                        <div class="forecast">
-                            <ion-icon name="partly-sunny-outline"></ion-icon>
-                        </div>
-                    <div class="suhu">
-                        <h1>23°C</h1>
-                    </div>
-                </div>
-                <p>The weather is perfect for a ride</p>
-                </div>
+                <div class="stat-toko">
 
-                <div class="navigation">
-                    <div class="username">Welcome, user123456</div>
-                    <a href="profilepage.html">
-                      <div class="profile-pic"></div>
-                    </a>
-                   
                 </div>
+                <div class="user-info">
+                    
+                </div>
+                
             </div>
 
         <div class="inner-body">
 
             <div class="best-deals">
-                <h2>Best Deals</h2>
+                <h2>Your Catalog</h2>
                
                 <div class="deals1">
                     <div class="deals-kiri">
@@ -118,24 +103,50 @@
             </div>
 
 
+            
             <div class="add-catalog">
-                <div class="left-column">
-                  <!-- Large element on the left -->
-                   <div class="add-catalog">
-
-                   </div>
-                   
-          
+                <div class="add-catalog-header">
+                    <div class="img-container">
+                        <img class="add-pic" src="gambar/addBike.png" alt="">
+                    </div>
                 </div>
-              
-               
-              </div>
+                <div class="add-catalog-body">
+                    <div class="add-button">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
 
             <div class="store-rec">
                 <div class="rec-header">
                   <h3>Reviews</h3>
                 </div>
-                <div class="rec-body"></div>
+                <div class="rec-body">
+                    <div class="review1">
+                        <h2>User123</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                           Quod dignissimos nobis totam natus iure sapiente vitae est officiis 
+                           asperiores ab? Fuga, officia quis sed iusto incidunt reiciendis facere? 
+                           Error, quas!
+                        </p>
+                    </div> 
+                    <div class="review1">
+                        <h2>User123</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                           Quod dignissimos nobis totam natus iure sapiente vitae est officiis 
+                           asperiores ab? Fuga, officia quis sed iusto incidunt reiciendis facere? 
+                           Error, quas!
+                        </p>
+                    </div>  
+                    <div class="review1">
+                        <h2>User123</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                           Quod dignissimos nobis totam natus iure sapiente vitae est officiis 
+                           asperiores ab? Fuga, officia quis sed iusto incidunt reiciendis facere? 
+                           Error, quas!
+                        </p>
+                    </div>            
+                </div>
             </div>
         </div>
         </div>

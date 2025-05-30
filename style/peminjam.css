@@ -37,37 +37,28 @@ html, body {
 .inner-header {
     width: 100%;
     height: 270px;
-    background-color: rgb(149, 187, 176);
+    background-color: transparent;
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
     color: white;
-}
-/* Weather Section */
-.weather {
-    width: 280px;
-    height: 200px;
-    background-color: transparent;
-    margin: 25px;
-}
-.forecast ion-icon {
-    font-size: 80px; /* make the ion-icon larger */
-     /* optional: change icon color (e.g. orange) */
-}
-.suhu h1{
-    font-size: 60px;
-}
-.judul h1 {
-    font-size: 80px;
-   
-}
-.cuaca {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 24px;
-
 }
+
+.stat-toko{
+    width: 600px;
+    height: 270px;
+    border-radius: 50px;
+    background-color: rgb(149, 187, 176);
+}
+.user-info{
+    width: 650px;
+    height: 270px;
+    border-radius: 50px;
+    background-color: rgb(149, 187, 176);
+}
+
+
 
 
 
@@ -143,11 +134,11 @@ html, body {
     overflow: visible;
     position: relative;
     top: -0.8cm; /* move up by 2cm */
-    right: 0.5cm;
+    
   }
   .gambar-deals{
     overflow: visible;
-    max-width: 160px;
+    max-width: 135px;
   }
   .deals-elements{
     margin: 10px;
@@ -167,6 +158,16 @@ html, body {
     font-size: 20px;
   }
 
+  .add-pic{
+    max-height: 200px;
+    position: relative;
+    top: -0.5cm;
+  }
+
+  .review1{
+    margin-bottom: 10px;
+  }
+
 
   
   
@@ -176,53 +177,51 @@ html, body {
 
 .add-catalog{
     width: 250px;
-    height: 330px;
+    height: 340px;
     background-color: white;
     margin-top: 30px;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: -0.3cm;
 }
-.return-date{
-    width: 250px;
-    height: 350px;
+
+.add-catalog-header{
+    background-color: #618B7D; /* green header */
+    color: white;
+    height: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+}
+.add-catalog-body{
     background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 50%; /* Adjust to leave room for header */
+    padding: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+}
+.add-button{
+    position: relative;
+    justify-content: center; /* center horizontally */
+    align-items: center;  
+    margin-left: 60px;
+    margin-top: 20px;
+    font-size: 90px;
+    opacity: 50%;
 }
 
-.widgets {
-    display: flex;
-    gap: 20px;
-}
 
-/* Left big column */
-.left-column {
-    flex: 2; /* takes more space */
-    margin-top: 10px;
-}
 
-/* Right column (2 stacked boxes) */
-.right-column {
-    flex: 1; /* takes less space */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 40px;
-}
 
-/* Example sizes for the boxes */
-.rentals-nearby {
-    height: 333px;
-    background-color: white;
-    border-radius: 15px;
-}
 
-.return-date,
-.promos {
-    height: 155px;
-    background-color: rgb(249, 249, 249);
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
 
 
@@ -275,12 +274,12 @@ html, body {
 
 .store-rec {
     width: 625px;
-    height: 300px;
+    height: 350px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
-    bottom: -0.5cm;
+    bottom: -0.8cm;
    
   }
   

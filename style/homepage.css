@@ -143,11 +143,11 @@ html, body {
     overflow: visible;
     position: relative;
     top: -0.8cm; /* move up by 2cm */
-    right: 0.5cm;
+    
   }
   .gambar-deals{
     overflow: visible;
-    max-width: 160px;
+    max-width: 135px;
   }
   .deals-elements{
     margin: 10px;
