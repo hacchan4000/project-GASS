@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="background">
+  <div class="background">
 
         <div class="inner-background">
 
@@ -25,10 +25,10 @@
                         <div class="forecast">
                             <ion-icon name="partly-sunny-outline"></ion-icon>
                         </div>
-                    <div class="suhu">
-                        <h1>23°C</h1>
+                        <div class="suhu">
+                            <h1>23°C</h1>
+                        </div>
                     </div>
-                </div>
                 <p>The weather is perfect for a ride</p>
                 </div>
 
@@ -39,9 +39,9 @@
                     </a>
                    
                 </div>
-        </div>
-
-        <div class="inner-body">
+            </div>
+            
+            <div class="inner-body">
 
             <div class="best-deals">
                 <h2>Best Deals</h2>
@@ -155,12 +155,18 @@
                 </div>
                 <div class="rec-body"></div>
             </div>
-        </div>
+            </div>
         </div>
 
-        <div class="sidebar">
-
-        </div>
+        <nav class="sidebar">
+          <header>
+            <div class="image-text">
+              <span class="image">
+                <img src="" alt="">
+              </span>
+            </div>
+          </header>
+        </nav>
   </div>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
