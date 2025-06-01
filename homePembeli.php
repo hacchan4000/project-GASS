@@ -165,7 +165,7 @@
           <header>
             <div class="image-text">
               <span class="image">
-                <img src="" alt="logo"><!-- masukin logo apk kita tar-->
+                <img src="gambar/logo.png" alt="logo"><!-- masukin logo apk kita tar-->
               </span>
 
               <div class="text header-text">
@@ -190,7 +190,7 @@
                 <li class="nav-link">
                   <a href="#">
                     <i class='bx bx-home-alt icon' ></i>
-                    <span class="text nav-text">Dashboard</span>
+                    <span class="text nav-text">Home</span>
                   </a>
                 </li>
                 <li class="nav-link">

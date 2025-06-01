@@ -177,11 +177,11 @@
         </div>
         </div>
 
-        <nav class="sidebar">
+        <nav class="sidebar close">
           <header>
             <div class="image-text">
               <span class="image">
-                <img src="" alt="logo"><!-- masukin logo apk kita tar-->
+                <img src="gambar/logo.png" alt="logo"><!-- masukin logo apk kita tar-->
               </span>
 
               <div class="text header-text">
@@ -206,7 +206,7 @@
                 <li class="nav-link">
                   <a href="#">
                     <i class='bx bx-home-alt icon' ></i>
-                    <span class="text nav-text">Dashboard</span>
+                    <span class="text nav-text">Home</span>
                   </a>
                 </li>
                 <li class="nav-link">
@@ -230,7 +230,7 @@
                 <li class="nav-link">
                   <a href="tokopage.html">
                     <i class='bx bx-store-alt icon' ></i>
-                    <span class="text nav-text">Stores</span>
+                    <span class="text nav-text">My Catalog</span>
                   </a>
                 </li>
                 <li class="nav-link">
