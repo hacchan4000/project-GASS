@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/editprofile.css">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="gambar/profile_picture.jpg" alt="Profile Picture" class="profile">
+            <p class="change">Change Photo</p>
+            <p class="delete">Delete Photo</p>
+            <div class="medsos">
+                <div class="item"><ion-icon name="logo-instagram" class="insta"></ion-icon><span>Add Instagram</span></div>
+                <div class="item"><ion-icon name="logo-facebook" class="facebook"></ion-icon><span>Add Facebook</span></div>
+                <div class="item"><ion-icon name="logo-twitter" class="twitter"></ion-icon><span>Add Twitter</span></div>
+            </div>
+            <div class="save">
+                <p>Save Change</p>
+            </div>
+        </div>
+        <div class="formdata">
+            <form class="form-container">
+                <label for="funame">Username:</label><br>
+                <input type="text" id="funame" name="funame"><br>
+                <label for="fname">Fullname:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" name="phone" pattern="[0-9]{10,15}" required /><br>
+                <label for="email">Email Address:</label><br>
+                <input type="email" name="email" required /><br>
+                <label for="city">City:</label><br>
+                <input type="text" name="city" required /><br>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

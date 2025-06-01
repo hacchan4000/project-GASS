@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('InriaSana_Regular.ttf') format('truetype');
+}
+
+body{
+    background-color: rgb(177, 208, 200);
+    margin: 0;
+    padding: 0;
+    font-family: 'MyFont', sans-serif;
+}
+.container{
+    height: 100vh;
+    width: max-content;
+}
+.sidebar{
+    width: 280px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 60px;
+    border-radius: 51px;
+    background-color: #CFE3DC;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formdata{
+    width: 704px;
+    height: 500px;
+    background-color: rgb(149, 187, 176);
+    position: fixed;
+    left: 380px;
+    top: 45px;
+    border-radius: 0px 51px 51px 0px;
+}
+.profile{
+    border-radius: 100%;
+    width: 117px;
+    height: 97px;
+    position: fixed;
+    top: 100px; 
+}
+
+.change{
+    color: rgb(93, 107, 107);
+    font-weight: bold;
+    position: fixed;
+    top: 190px;
+    cursor: pointer;
+}
+.delete{
+    color: rgb(255, 59, 55);
+    font-weight: bold;
+    position: fixed;
+    top: 210px;
+    cursor: pointer;
+}
+.medsos{
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    align-items: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 300px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.insta{
+    width: 23px;
+    height: 23px;
+    margin-right: 8px
+}
+.facebook{
+    width: 23px;
+    height: 23px;
+    margin-right: 8px
+}
+.twitter{
+    width: 23px;
+    height: 23px;
+    margin-right: 8px
+}
+.save{
+    width: 130px;
+    height: 32px;
+    background-color: rgb(149, 187, 176);
+    border-radius: 51px;
+    align-content: center;
+    position: fixed;
+    top: 500px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container{
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.form-container label{
+  font-size: 14px;
+  color:rgb(93, 107, 107);
+  font-weight: bold;
+}
+.form-container input{
+  background-color: rgb(97, 139, 125);
+  border: none;
+  padding: 10px 12px;
+  border-radius: 2px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+}

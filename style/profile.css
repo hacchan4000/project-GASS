@@ -8,9 +8,15 @@ body{
     padding: 0;
     font-family: 'MyFont', sans-serif;
 }
+.board{
+      display: flex;
+      height: 100vh;
+      padding: 30px;
+      position: absolute;
+}
 .username{
     width: 280px;
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 60px;
