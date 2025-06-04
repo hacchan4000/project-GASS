@@ -7,16 +7,17 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'MyFont', sans-serif;
+    position: fixed;
 }
 .board{
       display: flex;
       height: 100vh;
       padding: 30px;
-      position: absolute;
+      position: fixed;
 }
 .username{
     width: 280px;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 60px;
